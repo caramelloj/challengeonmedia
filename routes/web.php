@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\DatatableController;
+use App\Http\Controllers\TablesExpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,6 @@ Route::get('datatable/tg',[DatatableController::class,'elotg'])->name('datatable
 
 // Filtros
 Route::get('filtros/{tipo?}', [ApiController::class, 'aplicarFiltros'])->name('filtrados');
+
+// Download file
+Route::get('tablaselo/exportar/', [TablesExpController::class, 'export'])->name('export.xlsx');
