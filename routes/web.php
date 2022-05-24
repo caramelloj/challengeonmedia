@@ -15,16 +15,7 @@ use App\Http\Controllers\DatatableController;
 |
 */
 
-/* 
-Route::get('/admin', function(){
-    return view ('layouts.admin');
-});
-
-Route::get('/', function () {
-    return view('welcome');
-}); */
-
-Route::get('/', [ApiController::class, 'index']);
+Route::get('/', [ApiController::class, 'index'])->name('index');
 
 Route::get('datatable/1v1', [DatatableController::class,'onevsone'])->name('datatable.1v1');
 
