@@ -11,10 +11,7 @@ use Illuminate\Support\Facades\Http;
 class TablesExpController extends Controller
 {
     public function export(){
-
-
-
-       
+        
         return Excel::download(new TablesExport, 'players.xlsx');
     }
 

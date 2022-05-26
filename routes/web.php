@@ -18,9 +18,6 @@ use App\Http\Controllers\TablesExpController;
 
 Route::get('/', [ApiController::class, 'index'])->name('index');
 
-Route::get('datatable/1v1', [DatatableController::class,'onevsone'])->name('datatable.1v1');
-
-Route::get('datatable/tg',[DatatableController::class,'elotg'])->name('datatable.tg');
 
 // Filtros
 Route::get('filtros/{tipo?}', [ApiController::class, 'aplicarFiltros'])->name('filtrados');
