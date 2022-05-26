@@ -23,7 +23,7 @@ class ApiController extends Controller
         $res = '';
 
         if ($request->tipo == '1'){
-            $response1 = Http::get('https://aoe2.net/api/laderboard?game=aoe2de&leaderboard_id=3&start=1&count=100'); // edit ""
+            $response1 = Http::get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=100'); // edit ""
 
             $resp1 = $response1->json();
 
